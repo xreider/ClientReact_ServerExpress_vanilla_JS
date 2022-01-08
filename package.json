@@ -9,8 +9,8 @@
     "start:client": "cd client & yarn start",
     "start:server": "cd server & yarn start",
     "start-all": "concurrently yarn:start:*",
-    "inst:client": "cd client & rimraf node_modules & yarn install",
-    "inst:server": "cd server & rimraf node_modules & yarn install",
+    "inst:client": "cd client & yarn rimraf node_modules & yarn install",
+    "inst:server": "cd server & yarn rimraf node_modules & yarn install",
     "inst-all": "yarn install & concurrently yarn:inst:*"
   },
   "dependencies": {
