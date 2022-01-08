@@ -33,7 +33,7 @@ class Database {
 
   connect() {
     mongoose
-      .connect(<string>DB)
+      .connect(DB)
       .then(() => {
         console.log("DB connected");
       })
@@ -44,7 +44,7 @@ class Database {
 
   async createConnection() {
     try {
-      const db = await mongoose.createConnection(<string>DB);
+      const db = await mongoose.createConnection(DB);
       console.log("createConnection successful");
       db.on("error", (error) => console.log(error));
       db.once("open", () => console.log("Connected to DB"));
